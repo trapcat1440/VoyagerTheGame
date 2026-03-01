@@ -3,6 +3,7 @@
 <head>
     <title>VoyagersTheGame</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -46,13 +47,14 @@
         }
     </style>
 </head>
+
 <body>
 
 <h1>VoyagersTheGame</h1>
 
 <!-- Scenes -->
 <div id="scene1" class="scene"><img src="https://i.imghippo.com/files/Cfk3543Xsw.png"></div>
-<div id="scene2" class="scene"><img src="https://i.imghippo.com/files/oBqd6225ELs.png"></div>
+<div id="scene2" class="scene"><img src="https://i.imghippo.com/files/NIgE5175CAg.png"></div>
 <div id="scene3" class="scene"><img src="https://i.imghippo.com/files/zGQO1694gpg.png"></div>
 <div id="scene4" class="scene"><img src="https://i.imghippo.com/files/gN5040sr.png"></div>
 <div id="scene5" class="scene"><img src="https://i.imghippo.com/files/PNxq8874Ktg.png"></div>
@@ -63,6 +65,7 @@
 <!-- Buttons fixed bottom-left -->
 <div class="buttons">
     <button class="button" onclick="changeScene(-1)">Back</button>
+    
     <button class="button" onclick="changeScene(1)">Next</button>
 </div>
 
@@ -82,13 +85,13 @@
     };
 
     function changeScene(direction) {
-        // Hide current scene
+        // Hide current
         document.getElementById("scene" + currentScene).style.display = "none";
 
         // Update scene number
         currentScene += direction;
-        if (currentScene < 1) currentScene = 1;
-        if (currentScene > totalScenes) currentScene = totalScenes;
+        if(currentScene < 1) currentScene = 1;
+        if(currentScene > totalScenes) currentScene = totalScenes;
 
         // Show new scene
         document.getElementById("scene" + currentScene).style.display = "block";
